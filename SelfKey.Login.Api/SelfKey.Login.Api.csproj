@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Company>SelfKey Foundation</Company>
+    <Authors>NeoX</Authors>
+    <Description>A .NET Standard API for .NET client applications to leverage Login With SelfKey capabilities.</Description>
+    <Copyright>© 2018 SelfKey Foundation</Copyright>
+    <PackageProjectUrl>https://selfkey.org</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/SelfKeyFoundation/selfkey-net</RepositoryUrl>
+    <PackageTags>selfkey login net api</PackageTags>
+    <PackageIconUrl>https://selfkey.org/wp-content/uploads/2018/03/self-key-logo-icon-large@3x-64x64.png</PackageIconUrl>
+    <PackageReleaseNotes>This is the initial alpha release for demonstration purposes only.  It provides a single static class (Signer) for signing and verifying messages using Nethereum.</PackageReleaseNotes>
+    <Version>1.0.0-alpha.2</Version>
+    <Product>SelfKey Login API</Product>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Nethereum.Signer" Version="2.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+</Project>

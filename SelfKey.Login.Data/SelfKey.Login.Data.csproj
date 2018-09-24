@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.0-alpha.3</Version>
+    <Authors>NeoX</Authors>
+    <Company>SelfKey Foundation</Company>
+    <Product>SelfKey Login Data</Product>
+    <Description>A class library containing the models required for transmitting data for use with Login With SelfKey.</Description>
+    <Copyright>© 2018 SelfKey Foundation</Copyright>
+    <PackageProjectUrl>https://selfkey.org</PackageProjectUrl>
+    <PackageIconUrl>https://selfkey.org/wp-content/uploads/2018/03/self-key-logo-icon-large@3x-64x64.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/SelfKeyFoundation/selfkey-net</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>selfkey login net data</PackageTags>
+    <PackageReleaseNotes>This is the initial alpha release for demonstration purposes only.  It provides a set of model entity classes based on an initial draft of the JSON schema to be used for transmitting data.</PackageReleaseNotes>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="NSwag.MSBuild" Version="11.19.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
+  </ItemGroup>
+
+  <Target Name="NSwag" AfterTargets="Build">
+    <Copy SourceFiles="@(ReferencePath)" DestinationFolder="$(OutDir)References" />
+	<Exec Command="$(NSwagExe_Core21) run nswag.json /variables:Configuration=$(Configuration)" />
+    <RemoveDir Directories="$(OutDir)References" />
+  </Target>
+
+</Project>

@@ -1,0 +1,63 @@
+﻿{
+  "runtime": "NetCore21",
+  "defaultVariables": null,
+  "swaggerGenerator": {
+    "jsonSchemaToSwagger": {
+      "name": "Payload",
+      "schema": "{\r\n  \"definitions\": {},\r\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\r\n  \"$id\": \"http://example.com/root.json\",\r\n  \"type\": \"object\",\r\n  \"title\": \"The Root Schema\",\r\n  \"required\": [\r\n    \"claim\",\r\n    \"id\",\r\n    \"proof\",\r\n    \"type\",\r\n    \"issuer\",\r\n    \"issued\"\r\n  ],\r\n  \"properties\": {\r\n    \"claim\": {\r\n      \"$id\": \"#/properties/claim\",\r\n      \"type\": \"object\",\r\n      \"title\": \"The Claim Schema\",\r\n      \"required\": [\r\n        \"did\",\r\n        \"attributes\",\r\n        \"stake\"\r\n      ],\r\n      \"properties\": {\r\n        \"did\": {\r\n          \"$id\": \"#/properties/claim/properties/did\",\r\n          \"type\": \"string\",\r\n          \"title\": \"The Did Schema\",\r\n          \"default\": \"\",\r\n          \"examples\": [\r\n            \"did:key:0x62dfbf9cee9c6eded64d7e0b1e72165f0d26a7c8\"\r\n          ],\r\n          \"pattern\": \"^(.*)$\"\r\n        },\r\n        \"attributes\": {\r\n          \"$id\": \"#/properties/claim/properties/attributes\",\r\n          \"type\": \"object\",\r\n          \"title\": \"The Attributes Schema\",\r\n          \"required\": [\r\n            \"email\",\r\n            \"middle_name\",\r\n            \"last_name\",\r\n            \"first_name\",\r\n            \"country_of_residency\"\r\n          ],\r\n          \"properties\": {\r\n            \"email\": {\r\n              \"$id\": \"#/properties/claim/properties/attributes/properties/email\",\r\n              \"type\": \"string\",\r\n              \"title\": \"The Email Schema\",\r\n              \"default\": \"\",\r\n              \"examples\": [\r\n                \"ben@selfkey.org\"\r\n              ],\r\n              \"pattern\": \"^(.*)$\"\r\n            },\r\n            \"middle_name\": {\r\n              \"$id\": \"#/properties/claim/properties/attributes/properties/middle_name\",\r\n              \"type\": \"string\",\r\n              \"title\": \"The Middle_name Schema\",\r\n              \"default\": \"\",\r\n              \"examples\": [\r\n                \"Stephen\"\r\n              ],\r\n              \"pattern\": \"^(.*)$\"\r\n            },\r\n            \"last_name\": {\r\n              \"$id\": \"#/properties/claim/properties/attributes/properties/last_name\",\r\n              \"type\": \"string\",\r\n              \"title\": \"The Last_name Schema\",\r\n              \"default\": \"\",\r\n              \"examples\": [\r\n                \"Gervais\"\r\n              ],\r\n              \"pattern\": \"^(.*)$\"\r\n            },\r\n            \"first_name\": {\r\n              \"$id\": \"#/properties/claim/properties/attributes/properties/first_name\",\r\n              \"type\": \"string\",\r\n              \"title\": \"The First_name Schema\",\r\n              \"default\": \"\",\r\n              \"examples\": [\r\n                \"Benjamin\"\r\n              ],\r\n              \"pattern\": \"^(.*)$\"\r\n            },\r\n            \"country_of_residency\": {\r\n              \"$id\": \"#/properties/claim/properties/attributes/properties/country_of_residency\",\r\n              \"type\": \"string\",\r\n              \"title\": \"The Country_of_residency Schema\",\r\n              \"default\": \"\",\r\n              \"examples\": [\r\n                \"Canada\"\r\n              ],\r\n              \"pattern\": \"^(.*)$\"\r\n            }\r\n          }\r\n        },\r\n        \"stake\": {\r\n          \"$id\": \"#/properties/claim/properties/stake\",\r\n          \"type\": \"array\",\r\n          \"title\": \"The Stake Schema\",\r\n          \"items\": {\r\n            \"$id\": \"#/properties/claim/properties/stake/items\",\r\n            \"type\": \"object\",\r\n            \"title\": \"The Items Schema\",\r\n            \"required\": [\r\n              \"token\",\r\n              \"balance\"\r\n            ],\r\n            \"properties\": {\r\n              \"token\": {\r\n                \"$id\": \"#/properties/claim/properties/stake/items/properties/token\",\r\n                \"type\": \"string\",\r\n                \"title\": \"The Token Schema\",\r\n                \"default\": \"\",\r\n                \"examples\": [\r\n                  \"KEY\"\r\n                ],\r\n                \"pattern\": \"^(.*)$\"\r\n              },\r\n              \"balance\": {\r\n                \"$id\": \"#/properties/claim/properties/stake/items/properties/balance\",\r\n                \"type\": \"integer\",\r\n                \"title\": \"The Balance Schema\",\r\n                \"default\": 0,\r\n                \"examples\": [\r\n                  1000\r\n                ]\r\n              }\r\n            }\r\n          }\r\n        }\r\n      }\r\n    },\r\n    \"id\": {\r\n      \"$id\": \"#/properties/id\",\r\n      \"type\": \"string\",\r\n      \"title\": \"The Id Schema\",\r\n      \"default\": \"\",\r\n      \"examples\": [\r\n        \"1\"\r\n      ],\r\n      \"pattern\": \"^(.*)$\"\r\n    },\r\n    \"proof\": {\r\n      \"$id\": \"#/properties/proof\",\r\n      \"type\": \"object\",\r\n      \"title\": \"The Proof Schema\",\r\n      \"required\": [\r\n        \"created\",\r\n        \"nonce\",\r\n        \"signature\",\r\n        \"type\",\r\n        \"address\"\r\n      ],\r\n      \"properties\": {\r\n        \"created\": {\r\n          \"$id\": \"#/properties/proof/properties/created\",\r\n          \"type\": \"string\",\r\n          \"title\": \"The Created Schema\",\r\n          \"default\": \"\",\r\n          \"examples\": [\r\n            \"2018-06-18T21:19:10Z\"\r\n          ],\r\n          \"pattern\": \"^(.*)$\"\r\n        },\r\n        \"nonce\": {\r\n          \"$id\": \"#/properties/proof/properties/nonce\",\r\n          \"type\": \"string\",\r\n          \"title\": \"The Nonce Schema\",\r\n          \"default\": \"\",\r\n          \"examples\": [\r\n            \"0vZBEKanYA5phnloB3RNqYz6KhGo2mXOw0IA39ATOQuO1AT0dKDRAotpCq4wXOmRUmf05QuyhZ9elm8Clc64eXC5tYZd6XvPxgs9hRrV75isqHvguUjNjssU8lfUsiglCMPnibjK5dpxPU30EuZhtRe8Ysr6FIiVjD3HczAYL3B90ezXkzOCKBlpguqO5EN26scNmLonRwNadf673bfKsovafCQSvmpzirTsXG7VZTCGL1mw0GbXDLYCZLcTpqQB\"\r\n          ],\r\n          \"pattern\": \"^(.*)$\"\r\n        },\r\n        \"signature\": {\r\n          \"$id\": \"#/properties/proof/properties/signature\",\r\n          \"type\": \"string\",\r\n          \"title\": \"The Signature Schema\",\r\n          \"default\": \"\",\r\n          \"examples\": [\r\n            \"1/w00WNzQRSw6zZYf2mfV9PGYGDEws95ogsof1Jfgw1QGawhnlf6uc0c1ZxmlrZS9U6vEiNXEHugCsUqo5wCOhw=\"\r\n          ],\r\n          \"pattern\": \"^(.*)$\"\r\n        },\r\n        \"type\": {\r\n          \"$id\": \"#/properties/proof/properties/type\",\r\n          \"type\": \"string\",\r\n          \"title\": \"The Type Schema\",\r\n          \"default\": \"\",\r\n          \"examples\": [\r\n            \"ClaimSignature\"\r\n          ],\r\n          \"pattern\": \"^(.*)$\"\r\n        },\r\n        \"address\": {\r\n          \"$id\": \"#/properties/proof/properties/address\",\r\n          \"type\": \"string\",\r\n          \"title\": \"The Address Schema\",\r\n          \"default\": \"\",\r\n          \"examples\": [\r\n            \"ee8ac25d51d4ecd4b790de9896c36c15cba48d77\"\r\n          ],\r\n          \"pattern\": \"^(.*)$\"\r\n        }\r\n      }\r\n    },\r\n    \"type\": {\r\n      \"$id\": \"#/properties/type\",\r\n      \"type\": \"array\",\r\n      \"title\": \"The Type Schema\",\r\n      \"items\": {\r\n        \"$id\": \"#/properties/type/items\",\r\n        \"type\": \"string\",\r\n        \"title\": \"The Items Schema\",\r\n        \"default\": \"\",\r\n        \"examples\": [\r\n          \"first_name\",\r\n          \"middle_name\",\r\n          \"last_name\",\r\n          \"email\",\r\n          \"country_of_residency\"\r\n        ],\r\n        \"pattern\": \"^(.*)$\"\r\n      }\r\n    },\r\n    \"issuer\": {\r\n      \"$id\": \"#/properties/issuer\",\r\n      \"type\": \"string\",\r\n      \"title\": \"The Issuer Schema\",\r\n      \"default\": \"\",\r\n      \"examples\": [\r\n        \"self-attested\"\r\n      ],\r\n      \"pattern\": \"^(.*)$\"\r\n    },\r\n    \"issued\": {\r\n      \"$id\": \"#/properties/issued\",\r\n      \"type\": \"string\",\r\n      \"title\": \"The Issued Schema\",\r\n      \"default\": \"\",\r\n      \"examples\": [\r\n        \"2018-01-01\"\r\n      ],\r\n      \"pattern\": \"^(.*)$\"\r\n    }\r\n  }\r\n}",
+      "output": null
+    }
+  },
+  "codeGenerators": {
+    "swaggerToCSharpController": {
+      "controllerBaseClass": null,
+      "controllerStyle": "Partial",
+      "useCancellationToken": false,
+      "aspNetNamespace": "System.Web.Http",
+      "routeNamingStrategy": "None",
+      "className": "{controller}",
+      "operationGenerationMode": "MultipleClientsFromOperationId",
+      "additionalNamespaceUsages": [],
+      "additionalContractNamespaceUsages": [],
+      "generateOptionalParameters": false,
+      "generateJsonMethods": true,
+      "enforceFlagEnums": false,
+      "parameterArrayType": "System.Collections.Generic.IEnumerable",
+      "parameterDictionaryType": "System.Collections.Generic.IDictionary",
+      "responseArrayType": "System.Collections.ObjectModel.ObservableCollection",
+      "responseDictionaryType": "System.Collections.Generic.Dictionary",
+      "wrapResponses": false,
+      "wrapResponseMethods": [],
+      "generateResponseClasses": true,
+      "responseClass": "SwaggerResponse",
+      "namespace": "SelfKey.Login.Data.Models",
+      "requiredPropertiesMustBeDefined": true,
+      "dateType": "System.DateTime",
+      "jsonConverters": null,
+      "dateTimeType": "System.DateTime",
+      "timeType": "System.TimeSpan",
+      "timeSpanType": "System.TimeSpan",
+      "arrayType": "System.Collections.Generic.List",
+      "arrayInstanceType": null,
+      "dictionaryType": "System.Collections.Generic.Dictionary",
+      "dictionaryInstanceType": null,
+      "arrayBaseType": "System.Collections.ObjectModel.ObservableCollection",
+      "dictionaryBaseType": "System.Collections.Generic.Dictionary",
+      "classStyle": "Poco",
+      "generateDefaultValues": true,
+      "generateDataAnnotations": false,
+      "excludedTypeNames": [],
+      "handleReferences": false,
+      "generateImmutableArrayProperties": false,
+      "generateImmutableDictionaryProperties": false,
+      "jsonSerializerSettingsTransformationMethod": null,
+      "templateDirectory": null,
+      "typeNameGeneratorType": null,
+      "propertyNameGeneratorType": null,
+      "enumNameGeneratorType": null,
+      "serviceHost": null,
+      "serviceSchemes": null,
+      "output": "Models/LoginClasses.cs"
+    }
+  }
+}
