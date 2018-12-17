@@ -51,7 +51,7 @@
               "title": "The Email Schema",
               "default": "",
               "examples": [
-                "ben@selfkey.org"
+                "jason@kyc-chain.com"
               ],
               "pattern": "^(.*)$"
             },
@@ -61,7 +61,7 @@
               "title": "The Middle_name Schema",
               "default": "",
               "examples": [
-                "Stephen"
+                "Neo"
               ],
               "pattern": "^(.*)$"
             },
@@ -71,7 +71,7 @@
               "title": "The Last_name Schema",
               "default": "",
               "examples": [
-                "Gervais"
+                "Payne"
               ],
               "pattern": "^(.*)$"
             },
@@ -81,7 +81,7 @@
               "title": "The First_name Schema",
               "default": "",
               "examples": [
-                "Benjamin"
+                "Jason"
               ],
               "pattern": "^(.*)$"
             },
@@ -91,7 +91,7 @@
               "title": "The Country_of_residency Schema",
               "default": "",
               "examples": [
-                "Canada"
+                "Netherlands"
               ],
               "pattern": "^(.*)$"
             }

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -6,7 +6,7 @@
     <Authors>NeoX</Authors>
     <Company>SelfKey Foundation</Company>
     <Product>SelfKey Login Data</Product>
-    <Description>A class library containing the models required for transmitting data for use with Login With SelfKey.</Description>
+    <Description>A class library containing the models required for transmitting data for use with Login with SelfKey.</Description>
     <Copyright>© 2018 SelfKey Foundation</Copyright>
     <PackageProjectUrl>https://selfkey.org</PackageProjectUrl>
     <PackageIconUrl>https://selfkey.org/wp-content/uploads/2018/03/self-key-logo-icon-large@3x-64x64.png</PackageIconUrl>
@@ -18,8 +18,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="NSwag.MSBuild" Version="11.19.2">
+    <PackageReference Include="NSwag.MSBuild" Version="12.0.7">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>

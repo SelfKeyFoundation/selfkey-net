@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Text;
 using Nethereum.Signer;
+using SelfKey.Login.Data.Models;
 
 namespace SelfKey.Login.Api
 {
-    public static class Signer
+    public static class Authenticator
     {
         private static readonly EthereumMessageSigner MessageSigner = new EthereumMessageSigner();
 
@@ -18,9 +19,9 @@ namespace SelfKey.Login.Api
             return MessageSigner.HashAndSign(Encoding.UTF8.GetBytes(message), key);
         }
 
-        public static bool Verify(string message, string signature, string address)
+        public static bool Verify(User user)
         {
-            return MessageSigner.HashAndEcRecover(message, signature).Equals(address, StringComparison.OrdinalIgnoreCase);
+            return MessageSigner.HashAndEcRecover(user.Proof.Nonce, user.Proof.Signature).Equals(user.Proof.Address, StringComparison.OrdinalIgnoreCase);
         }
     }
 }

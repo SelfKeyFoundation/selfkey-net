@@ -1,15 +1,15 @@
 # Overview
 
-SelfKey.NET is the SelfKey platform to support our partners using .NET including .NET Core, .NET Standard and ASP.NET Core 2.1.
+SelfKey.NET is the SelfKey platform to support our partners using .NET including .NET Core, .NET Standard and ASP.NET Core 2.2.
 
  * **SelfKey.Login.Api** is a .NET Standard API for .NET client applications to leverage Login with SelfKey capabilities.
  * **SelfKey.Login.Data** is a class library containing the models required for transmitting data for use with Login with SelfKey.
 
 ## SelfKey.Login.Api
 
- * This module provides a single static class (`Signer`) for signing and verifying messages using [Nethereum](https://nethereum.com/).  It may be added as a dependency to any .NET project supporting [.NET Standard](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) 2.0.
+ * This module provides a single static class (`Authenticator`) for signing and verifying messages using [Nethereum](https://nethereum.com/).  It may be added as a dependency to any .NET project supporting [.NET Standard](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) 2.0.
  * Call `Sign` to sign a message.  You may pass a private key as a string or an `EthECKey` object.  The method will return a signature that can be used to verify the message later.
- * Call `Verify` to verify a message using a passed signature.  It will verify that the recovered public key matches the address provided (passed in).
+ * Call `Verify` to verify a message using a passed [`User`](SelfKey.Login.Data/Models/User.Entity.cs) object.  It will verify that the recovered public key matches the address provided in the `User` object.
  
 ## SelfKey.Login.Data
 

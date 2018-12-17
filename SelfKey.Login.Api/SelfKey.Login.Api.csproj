@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Company>SelfKey Foundation</Company>
     <Authors>NeoX</Authors>
-    <Description>A .NET Standard API for .NET client applications to leverage Login With SelfKey capabilities.</Description>
+    <Description>A .NET Standard API for .NET client applications to leverage Login with SelfKey capabilities.</Description>
     <Copyright>© 2018 SelfKey Foundation</Copyright>
     <PackageProjectUrl>https://selfkey.org</PackageProjectUrl>
     <RepositoryUrl>https://github.com/SelfKeyFoundation/selfkey-net</RepositoryUrl>
@@ -19,7 +19,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Nethereum.Signer" Version="2.5.1" />
+    <PackageReference Include="Nethereum.Signer" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SelfKey.Login.Data\SelfKey.Login.Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>

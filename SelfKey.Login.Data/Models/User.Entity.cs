@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Linq;
+using Microsoft.AspNetCore.Identity;
 using Newtonsoft.Json;
-
-#pragma warning disable IDE1006 // Naming Styles
 
 namespace SelfKey.Login.Data.Models
 {
-    public partial class Payload
+    public partial class User : IdentityUser
     {
         [JsonIgnore]
         public string TypeCsv
