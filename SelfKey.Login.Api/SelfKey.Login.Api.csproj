@@ -10,12 +10,14 @@
     <RepositoryUrl>https://github.com/SelfKeyFoundation/selfkey-net</RepositoryUrl>
     <PackageTags>selfkey login net api</PackageTags>
     <PackageIconUrl>https://selfkey.org/wp-content/uploads/2018/03/self-key-logo-icon-large@3x-64x64.png</PackageIconUrl>
-    <PackageReleaseNotes>This is the initial alpha release for demonstration purposes only.  It provides a single static class (Signer) for signing and verifying messages using Nethereum.</PackageReleaseNotes>
-    <Version>1.0.0-alpha.2</Version>
+    <PackageReleaseNotes>This is the first official release candidate suitable for user acceptance testing.  It provides a single static class (Authenticator formerly Signer) for signing and verifying messages using Nethereum.</PackageReleaseNotes>
+    <Version>1.0.0-rc</Version>
     <Product>SelfKey Login API</Product>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <RepositoryType>git</RepositoryType>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

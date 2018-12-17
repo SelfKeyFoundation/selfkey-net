@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.0.0-alpha.3</Version>
+    <Version>1.0.0-rc</Version>
     <Authors>NeoX</Authors>
     <Company>SelfKey Foundation</Company>
     <Product>SelfKey Login Data</Product>
@@ -13,8 +13,10 @@
     <RepositoryUrl>https://github.com/SelfKeyFoundation/selfkey-net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>selfkey login net data</PackageTags>
-    <PackageReleaseNotes>This is the initial alpha release for demonstration purposes only.  It provides a set of model entity classes based on an initial draft of the JSON schema to be used for transmitting data.</PackageReleaseNotes>
+    <PackageReleaseNotes>This is the first official release candidate suitable for user acceptance testing.  The model entity classes are based on a tested JSON schema that maps to the User object, used for transmitting data.</PackageReleaseNotes>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
